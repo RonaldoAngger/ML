@@ -114,17 +114,16 @@ st.markdown("Masukkan parameter tanah dan **koordinat (latitude, longitude)** un
 with st.form("tanah_form"):
     col1, col2 = st.columns(2)
     with col1:
-        N = st.number_input("Nitrogen (N)", 0.0, 150.0, 50.0)
-        P = st.number_input("Phosphor (P)", 0.0, 150.0, 50.0)
-        K = st.number_input("Kalium (K)", 0.0, 150.0, 50.0)
-        ph = st.number_input("pH Tanah", 0.0, 14.0, 6.5)
+        N = st.number_input("Nitrogen (N)")
+        P = st.number_input("Phosphor (P)")
+        K = st.number_input("Kalium (K)")
+        ph = st.number_input("pH Tanah")
     with col2:
-        temperature = st.number_input("Suhu (°C)", 0.0, 50.0, 25.0)
-        humidity = st.number_input("Kelembapan (%)", 0.0, 100.0, 60.0)
+        temperature = st.number_input("Suhu (°C)")
+        humidity = st.number_input("Kelembapan (%)")
 
         koordinat_str = st.text_input(
-            "Masukkan Koordinat (format: latitude, longitude)",
-            "-6.914744, 107.609810"
+            "Masukkan Koordinat (format: latitude, longitude)"
         )
 
     lokasi = st.selectbox(
@@ -170,5 +169,6 @@ if submitted:
         st.subheader("🌱 Rekomendasi Tanaman")
         for t in rekom:
             st.write(f"- {translate_crop.get(t, t).capitalize()} ({t})")
+
 
 
