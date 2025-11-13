@@ -171,5 +171,4 @@ if submitted:
         for t in rekom:
             st.write(f"- {translate_crop.get(t, t).capitalize()} ({t})")
 
-st.markdown("---")
-st.caption("© 2025 - Aplikasi Rekomendasi Tanaman berbasis Machine Learning + Open-Meteo API + Nominatim Reverse Geocoding")
+
